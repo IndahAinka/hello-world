@@ -24,3 +24,9 @@ uploaded_file = st.file_uploader('Choose a csv file')
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
     st.dataframe(df)
+
+# Membuat camera input
+picture = st.camera_input('Take a picture')
+
+if picture:
+    st.image(picture)
