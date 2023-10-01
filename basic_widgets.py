@@ -36,3 +36,9 @@ st.title('Button Widgets')
 # Membuat Button
 if st.button('Say Hello'):
     st.write('Hello There')
+
+# Membuat CheckBox
+agree = st.checkbox('I Agree')
+
+if agree:
+    st.write('Welcome to my App')
