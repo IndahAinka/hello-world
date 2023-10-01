@@ -42,3 +42,13 @@ agree = st.checkbox('I Agree')
 
 if agree:
     st.write('Welcome to my App')
+
+# Menambahkan radio buton
+genre = st.radio(
+    label="What's your favorite movie genre",
+    options=('Comedy','Drama','Documentary'),
+    horizontal= False
+)
+
+if genre:
+    st.write(genre)
