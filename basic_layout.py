@@ -1,4 +1,6 @@
 import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
 
 st.title("Belajar Analisis Data")
 
@@ -47,7 +49,7 @@ with col3:
 
 
 #Membuat Tab
-st.write('Belajar membuat Tab')
+st.title('Belajar membuat Tab')
 tab1, tab2, tab3 = st.tabs(["Tab 1", "Tab 2", "Tab 3"])
  
 with tab1:
@@ -61,3 +63,16 @@ with tab2:
 with tab3:
     st.header("Tab 3")
     st.image("https://static.streamlit.io/examples/owl.jpg")
+
+
+# Membuat Container
+with st.container():
+    st.write("Inside the container")
+    
+    x = np.random.normal(15, 5, 250)
+ 
+    fig, ax = plt.subplots()
+    ax.hist(x=x, bins=15)
+    st.pyplot(fig) 
+ 
+st.write("Outside the container")
