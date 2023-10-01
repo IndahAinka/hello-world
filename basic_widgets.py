@@ -30,3 +30,9 @@ picture = st.camera_input('Take a picture')
 
 if picture:
     st.image(picture)
+
+st.title('Button Widgets')
+
+# Membuat Button
+if st.button('Say Hello'):
+    st.write('Hello There')
